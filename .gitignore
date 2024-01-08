@@ -1,0 +1,11 @@
+# PHPStorm
+/.idea
+
+# configuration
+config.php
+
+# fichiers inutiles
+
+/datas/coolcoldenV2.mwb.bak
+/datas/coolcoldenV2.mwb
+
