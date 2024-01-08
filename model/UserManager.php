@@ -13,7 +13,16 @@ class UserManager implements ManagerInterface
 
     public function connectUser(UserModel $user):bool{
 
-        $sql = "SELECT * FROM user WHERE username = ?";
+        $sql = "SELECT u.*, 
+                    GROUP_CONCAT(a.idannee) AS idannee,
+                    GROUP_CONCAT(a.section SEPARATOR '|||') AS section,
+                    GROUP_CONCAT(a.annee) AS annee  FROM `user` u
+                    LEFT JOIN `user_has_annee` h 
+                        ON u.iduser = h.user_iduser
+                    LEFT JOIN `annee` a 
+                        ON h.annee_idannee = u.idannee
+                 WHERE username = ?
+                 GROUP BY u.iduser;";
         $request = $this->connect->prepare($sql);
 
         try {
