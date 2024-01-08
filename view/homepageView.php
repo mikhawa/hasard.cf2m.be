@@ -58,7 +58,7 @@
             <h1 class="h2">Groupe Webdev 2023-2024  depuis <?=$letps?></h1>
             <p class=" h3 fs-5 pb-4 col-md-8">Une question, un.e stagiaire, une réponse !</p>
         </div>
-        <?php // var_dump($_SESSION);?>
+        <?php  var_dump($_SESSION);?>
         <div class="d-grid gap-2 col-6 mx-auto">
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 Nouvelle question au hasard !

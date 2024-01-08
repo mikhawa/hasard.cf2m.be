@@ -23,7 +23,7 @@ if(isset($_GET['logs'])&&ctype_digit($_GET['logs'])){
     if(is_string($recupStats)) die($recupStats);
     if(is_string($recupLogs)) die($recupLogs);
 
-    // View
+    // View logs
     require_once "../view/logView.php";
 
 // homepage admin

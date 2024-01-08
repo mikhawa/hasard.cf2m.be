@@ -10,9 +10,10 @@ class UserModel extends AbstractModel
     protected string $clefunique;
     protected int $perm;
 
-    protected string $idannee;
-    protected string $section;
-    protected string $annee;
+    // linked tables (annee)
+    protected string|array $idannee;
+    protected string|array $section;
+    protected string|array $annee;
 
     /**
      * @return int
@@ -125,9 +126,11 @@ class UserModel extends AbstractModel
     /**
      * @return string
      */
-    public function getIdannee(): string
+    public function getIdannee(): array|string
     {
-        return $this->idannee;
+    $separator = ',';
+    $array = explode($separator, $this->idannee);
+        return $array;
     }
 
     /**
@@ -143,9 +146,11 @@ class UserModel extends AbstractModel
     /**
      * @return string
      */
-    public function getSection(): string
+    public function getSection(): array|string
     {
-        return $this->section;
+        $separator = '|||';
+        $array = explode($separator, $this->section);
+        return $array;
     }
 
     /**
@@ -161,9 +166,11 @@ class UserModel extends AbstractModel
     /**
      * @return string
      */
-    public function getAnnee(): string
+    public function getAnnee(): array|string
     {
-        return $this->annee;
+        $separator = ',';
+        $array = explode($separator, $this->annee);
+        return $array;
     }
 
     /**
