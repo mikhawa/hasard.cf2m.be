@@ -15,9 +15,9 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `hasard`
 --
--- DROP DATABASE IF EXISTS `hasard`;
--- CREATE DATABASE IF NOT EXISTS `hasard` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
--- USE `hasard`;
+DROP DATABASE IF EXISTS `hasard`;
+CREATE DATABASE IF NOT EXISTS `hasard` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `hasard`;
 
 -- --------------------------------------------------------
 
