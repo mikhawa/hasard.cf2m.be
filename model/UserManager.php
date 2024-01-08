@@ -16,11 +16,12 @@ class UserManager implements ManagerInterface
         $sql = "SELECT u.*, 
                     GROUP_CONCAT(a.idannee) AS idannee,
                     GROUP_CONCAT(a.section SEPARATOR '|||') AS section,
-                    GROUP_CONCAT(a.annee) AS annee  FROM `user` u
+                    GROUP_CONCAT(a.annee) AS annee  
+                FROM `user` u
                     LEFT JOIN `user_has_annee` h 
                         ON u.iduser = h.user_iduser
                     LEFT JOIN `annee` a 
-                        ON h.annee_idannee = u.idannee
+                        ON h.annee_idannee = a.idannee
                  WHERE username = ?
                  GROUP BY u.iduser;";
         $request = $this->connect->prepare($sql);

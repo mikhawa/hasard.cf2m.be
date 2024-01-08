@@ -10,6 +10,8 @@ class UserModel extends AbstractModel
     protected string $clefunique;
     protected int $perm;
 
+    protected $idannee;
+
     /**
      * @return int
      */
