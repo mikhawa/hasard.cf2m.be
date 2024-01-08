@@ -10,7 +10,9 @@ class UserModel extends AbstractModel
     protected string $clefunique;
     protected int $perm;
 
-    protected $idannee;
+    protected string $idannee;
+    protected string $section;
+    protected string $annee;
 
     /**
      * @return int
@@ -119,6 +121,61 @@ class UserModel extends AbstractModel
         $this->perm = $perm;
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getIdannee(): string
+    {
+        return $this->idannee;
+    }
+
+    /**
+     * @param string $idannee
+     * @return UserModel
+     */
+    public function setIdannee(string $idannee): UserModel
+    {
+        $this->idannee = $idannee;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSection(): string
+    {
+        return $this->section;
+    }
+
+    /**
+     * @param string $section
+     * @return UserModel
+     */
+    public function setSection(string $section): UserModel
+    {
+        $this->section = $section;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAnnee(): string
+    {
+        return $this->annee;
+    }
+
+    /**
+     * @param string $annee
+     * @return UserModel
+     */
+    public function setAnnee(string $annee): UserModel
+    {
+        $this->annee = $annee;
+        return $this;
+    }
+
 
 
 }

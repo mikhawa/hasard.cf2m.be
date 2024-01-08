@@ -11,6 +11,7 @@ class UserManager implements ManagerInterface
         $this->connect = $db;
     }
 
+    // connect a user
     public function connectUser(UserModel $user):bool{
 
         $sql = "SELECT u.*, 
@@ -37,9 +38,11 @@ class UserManager implements ManagerInterface
             return false;
 
         }else{
+            // verify password
             $userConnect = $request->fetch(PDO::FETCH_ASSOC);
             if(password_verify($user->getUserpwd(),$userConnect['userpwd'])){
                 $goodUser = new UserModel($userConnect);
+                // create session
                 return $this->connectSession($goodUser);
             }else{
                 return false;
@@ -47,6 +50,7 @@ class UserManager implements ManagerInterface
         }
     }
 
+    // create a user's session
     private function connectSession(UserModel $user): bool{
         $_SESSION['myidsession']= session_id();
         $_SESSION['username']=$user->getUsername();
@@ -54,10 +58,14 @@ class UserManager implements ManagerInterface
         $_SESSION['perm']=$user->getPerm();
         $_SESSION['clefunique']=$user->getClefunique();
         $_SESSION['usermail']=$user->getThemail();
+        $_SESSION['idannee']=$user->getIdannee();
+        $_SESSION['section']=$user->getSection();
+        $_SESSION['annee']=$user->getAnnee();
 
         return true;
     }
 
+    // disconnect a user
     public static function disconnect(): bool{
 
         $_SESSION = array();
