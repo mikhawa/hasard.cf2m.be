@@ -46,8 +46,14 @@
 
     <main>
         <div class="col-lg-11 mx-auto p-3 py-md-5">
-            <h1 class="h2">Choix du groupe</h1>
-            <p class=" h3 fs-5 pb-4 col-md-8">Une question, un.e stagiaire, une réponse !</p>
+            <h1 class="h2">Choix du groupe</h1><hr>
+            <?php
+            foreach ($_SESSION['idannee'] as $key => $value):
+            ?>
+            <p class=" h3 fs-5 pb-4 col-md-8"><a href="?choice=<?=$value?>"><?=$_SESSION['annee'][$key]?> | <?=$_SESSION['section'][$key]?></a></p>
+            <?php
+            endforeach;
+            ?>
             <?php var_dump($_SESSION); ?>
         </div>
 
