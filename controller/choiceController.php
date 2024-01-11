@@ -5,5 +5,5 @@ if(isset($_GET['disconnect'])){
 }
 
 // View
-require_once "../view/homepageView.php";
+require_once "../view/choiceView.php";
 
