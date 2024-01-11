@@ -87,7 +87,7 @@
                     foreach ($recupAllStagiaires as $button):
                         ?>
                         <button type="button"
-                                onclick="choix(2,<?= (int)$button['idstagiaires'] ?>,'<?= $button["prenom"] . " " . substr($button['nom'], 0, 1) ?>')"
+                                onclick="choix(<?=$_SESSION['classe']?>,<?= (int)$button['idstagiaires'] ?>,'<?= $button["prenom"] . " " . substr($button['nom'], 0, 1) ?>')"
                                 class="btn btn-outline-primary p-1 m-1 " data-bs-toggle="modal"
                                 data-bs-target="#staticBackdrop">
                             <strong><?= $button["prenom"] . " " . substr($button['nom'], 0, 1) ?></strong></button>
@@ -163,11 +163,11 @@
                     <h5 class="modal-title" id="staticBackdropLabel">Question
                         pour <?= $recupOneStagiaire["prenom"] . " " . substr($recupOneStagiaire['nom'], 0, 1) ?>.</h5>
                     <button type="button" onclick="onLoadPage('hasard', 'hasard', new XMLHttpRequest(),'<?php
-                     echo (isset($_GET['temps'])) ? $_GET['temps'] : 'tous'; ?>' );"
+                     echo (isset($_GET['temps'])) ? $_GET['temps'] : 'tous'; ?>', <?=$_SESSION['classe']?> );"
                             class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                 </div>
                 <div id="idstagiaire" class="visually-hidden"><?= $recupOneStagiaire['idstagiaires'] ?></div>
-                <div id="idannee" class="visually-hidden">2</div>
+                <div id="idannee" class="visually-hidden"><?=$_SESSION['classe']?></div>
                 <div id="temps" class="visually-hidden"><?php echo (isset($_GET['temps'])) ? $_GET['temps'] : 'tous'; ?></div>
             </div>
             <div class="modal-body">

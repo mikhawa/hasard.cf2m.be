@@ -5,7 +5,7 @@ $stagiairesManager = new StagiairesManager($connect);
 $statsManager = new AnneeManager($connect);
 
 
-$idan = (int)$_GET['idan'];
+$idan = (int)$_SESSION['classe'];
 
 $stats = $statsManager->SelectStatsByAnneeAndDate($idan,$tps);
 // var_dump($_GET);
