@@ -57,7 +57,7 @@
     <main>
 
 <h2 class="h5">Statistiques Personnelles</h2>
-        <?php  var_dump($_SESSION);?>
+        <?php  //var_dump($_SESSION);?>
 <hr/>
 <table class="table table-striped">
     <thead>
