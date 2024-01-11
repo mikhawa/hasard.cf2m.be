@@ -42,6 +42,7 @@ if (isset($_SESSION['myidsession']) && $_SESSION['myidsession'] == session_id())
     // if we are a student
     if($_SESSION['perm']==0){
 
+        $_SESSION['classe'] = $_SESSION['idannee'][0];
         // go to student controller
         require "../controller/stagController.php";
 

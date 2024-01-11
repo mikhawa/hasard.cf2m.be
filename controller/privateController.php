@@ -25,7 +25,7 @@ $statsManager = new AnneeManager($connect);
 $responseManager = new ReponselogManager($connect);
 
 // logs
-if(isset($_GET['logs'])&&ctype_digit($_GET['logs'])){
+if(isset($_GET['logs'])){
     $logs = (int) $_SESSION['classe'];
     // année
     $recupStats = $statsManager->SelectAllByAnnee($logs);
