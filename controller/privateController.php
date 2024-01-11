@@ -1,7 +1,23 @@
 <?php
+/*
+ * Private controller
+ */
 
+// if you want to disconnect
 if(isset($_GET['disconnect'])){
-    if(UserManager::disconnect()) header("Location: ./");
+    if(UserManager::disconnect()){
+        header("Location: ./");
+        exit();
+    }
+}
+
+// if you want to change the class
+if(isset($_GET['newChoice'])){
+    // delete the class in session
+    unset($_SESSION['classe']);
+    // redirect to the choice controller
+    header("Location: ./");
+    exit();
 }
 
 $stagiairesManager = new StagiairesManager($connect);

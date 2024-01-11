@@ -37,7 +37,7 @@ class Calcul
         return $new;
     }
 
-    // créer les % de sorties par rapport aux logs et remettre le tableau dans l'ordre des sorties!
+    // créer les % de sorties par rapport aux logs et remettre le tableau dans l'ordre des sorties !
     public static function calculSorties(array $ori):array{
         $new =$ori;
 

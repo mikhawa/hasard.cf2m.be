@@ -41,7 +41,8 @@
         <li class="nav-item"><a class="nav-link" href="?temps=1-jour">1 jour</a></li>
         <li class="nav-item"><a class="nav-link" href="?logs=2">logs</a></li>
     </ul>
-    <a href="?disconnect"><button type="button" class="btn btn-primary">Déconnexion</button>
+            <a href="?newChoice" class="px-2"><button type="button" class="btn btn-primary">Changer de classe</button>
+        <a href="?disconnect"><button type="button" class="btn btn-primary">Déconnexion</button>
     </a>
         </div>
     </div>
