@@ -31,6 +31,10 @@ if (isset($_GET['temps'])) {
             $tps = Calcul::laDate(CHOIX_DATE["1 semaine"]);
             $letps = "1 semaine";
             break;
+        case "1-jour":
+            $tps = Calcul::laDate(CHOIX_DATE["1 jour"]);
+            $letps = "1 jour";
+            break;
         default:
             $tps = Calcul::laDate(CHOIX_DATE["tous"]);
             $letps = "le début";
