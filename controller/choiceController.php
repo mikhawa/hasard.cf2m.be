@@ -5,7 +5,10 @@
 
 // if you want to disconnect
 if(isset($_GET['disconnect'])){
-    if(UserManager::disconnect()) header("Location: ./");
+    if(UserManager::disconnect()){
+        header("Location: ./");
+        exit();
+    }
 }
 
 // if we choose a class

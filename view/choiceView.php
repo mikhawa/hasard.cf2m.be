@@ -54,7 +54,7 @@
             <?php
             endforeach;
             ?>
-            <?php var_dump($_SESSION); ?>
+            <?php // var_dump($_SESSION); ?>
         </div>
 
 </main>

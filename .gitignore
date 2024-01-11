@@ -9,3 +9,5 @@ config.php
 /datas/coolcoldenV2.mwb.bak
 /datas/coolcoldenV2.mwb
 
+# bibliothèques
+/vendor
