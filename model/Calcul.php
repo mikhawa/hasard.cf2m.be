@@ -6,7 +6,11 @@ class Calcul
     {
         $retour = $valeur1 . " (";
         if (!empty($valeur1)):
-            $retour .= round((($valeur1 / $valeur2) * 100), 2) . " %)";
+            if(!empty($valeur2)):
+                $retour .= round((($valeur1 / $valeur2) * 100), 2) . " %)";
+            else:
+                $retour .= "0 %)";
+            endif;
         else:
             $retour .= "0 %)";
         endif;
@@ -37,7 +41,7 @@ class Calcul
         return $new;
     }
 
-    // créer les % de sorties par rapport aux logs et remettre le tableau dans l'ordre des sorties!
+    // créer les % de sorties par rapport aux logs et remettre le tableau dans l'ordre des sorties !
     public static function calculSorties(array $ori):array{
         $new =$ori;
 

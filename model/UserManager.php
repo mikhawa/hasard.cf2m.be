@@ -58,6 +58,7 @@ class UserManager implements ManagerInterface
         $_SESSION['perm']=$user->getPerm();
         $_SESSION['clefunique']=$user->getClefunique();
         $_SESSION['usermail']=$user->getThemail();
+        // linked tables (annee) for choice class
         $_SESSION['idannee']=$user->getIdannee();
         $_SESSION['section']=$user->getSection();
         $_SESSION['annee']=$user->getAnnee();

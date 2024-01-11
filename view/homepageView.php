@@ -38,9 +38,11 @@
         <li class="nav-item"><a class="nav-link" href="?temps=1-mois">1 mois</a></li>
         <li class="nav-item"><a class="nav-link" href="?temps=2-semaines">2 semaines</a></li>
         <li class="nav-item"><a class="nav-link" href="?temps=1-semaine">1 semaine</a></li>
-        <li class="nav-item"><a class="nav-link" href="?logs=2">logs</a></li>
+        <li class="nav-item"><a class="nav-link" href="?temps=1-jour">1 jour</a></li>
+        <li class="nav-item"><a class="nav-link" href="?logs">logs</a></li>
     </ul>
-    <a href="?disconnect"><button type="button" class="btn btn-primary">Déconnexion</button>
+            <a href="?newChoice" class="px-2"><button type="button" class="btn btn-primary">Changer de classe</button>
+        <a href="?disconnect"><button type="button" class="btn btn-primary">Déconnexion</button>
     </a>
         </div>
     </div>
@@ -58,7 +60,7 @@
             <h1 class="h2">Groupe Webdev 2023-2024  depuis <?=$letps?></h1>
             <p class=" h3 fs-5 pb-4 col-md-8">Une question, un.e stagiaire, une réponse !</p>
         </div>
-        <?php  var_dump($_SESSION);?>
+        <?php  // var_dump($_SESSION);?>
         <div class="d-grid gap-2 col-6 mx-auto">
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 Nouvelle question au hasard !
@@ -85,7 +87,7 @@
                     foreach ($recupAllStagiaires as $button):
                         ?>
                         <button type="button"
-                                onclick="choix(2,<?= (int)$button['idstagiaires'] ?>,'<?= $button["prenom"] . " " . substr($button['nom'], 0, 1) ?>')"
+                                onclick="choix(<?=$_SESSION['classe']?>,<?= (int)$button['idstagiaires'] ?>,'<?= $button["prenom"] . " " . substr($button['nom'], 0, 1) ?>')"
                                 class="btn btn-outline-primary p-1 m-1 " data-bs-toggle="modal"
                                 data-bs-target="#staticBackdrop">
                             <strong><?= $button["prenom"] . " " . substr($button['nom'], 0, 1) ?></strong></button>
@@ -161,11 +163,11 @@
                     <h5 class="modal-title" id="staticBackdropLabel">Question
                         pour <?= $recupOneStagiaire["prenom"] . " " . substr($recupOneStagiaire['nom'], 0, 1) ?>.</h5>
                     <button type="button" onclick="onLoadPage('hasard', 'hasard', new XMLHttpRequest(),'<?php
-                     echo (isset($_GET['temps'])) ? $_GET['temps'] : 'tous'; ?>' );"
+                     echo (isset($_GET['temps'])) ? $_GET['temps'] : 'tous'; ?>', <?=$_SESSION['classe']?> );"
                             class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                 </div>
                 <div id="idstagiaire" class="visually-hidden"><?= $recupOneStagiaire['idstagiaires'] ?></div>
-                <div id="idannee" class="visually-hidden">2</div>
+                <div id="idannee" class="visually-hidden"><?=$_SESSION['classe']?></div>
                 <div id="temps" class="visually-hidden"><?php echo (isset($_GET['temps'])) ? $_GET['temps'] : 'tous'; ?></div>
             </div>
             <div class="modal-body">

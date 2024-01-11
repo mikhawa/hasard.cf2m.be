@@ -42,12 +42,25 @@ if (isset($_SESSION['myidsession']) && $_SESSION['myidsession'] == session_id())
     // if we are a student
     if($_SESSION['perm']==0){
 
+        $_SESSION['classe'] = $_SESSION['idannee'][0];
         // go to student controller
         require "../controller/stagController.php";
 
         // stop the script
         exit();
     }
+
+    // if we are a teacher, we choose a valide class into session
+    if($_SESSION['perm']==1){
+        // if we have no class in session
+        if(!isset($_SESSION['classe'])){
+            // go to the choice controller
+            require "../controller/choiceController.php";
+            // stop the script
+            exit();
+        }
+    }
+
 
     // if you are an administrator, manage ajax requests
     if (isset($_GET['myfile'])) {

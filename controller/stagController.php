@@ -1,7 +1,14 @@
 <?php
+/*
+ * Controller
+ */
 
+// if you want to disconnect
 if(isset($_GET['disconnect'])){
-    if(UserManager::disconnect()) header("Location: ./");
+    if(UserManager::disconnect()){
+        header("Location: ./");
+        exit();
+    }
 }
 
 
@@ -11,15 +18,15 @@ $statsManager = new AnneeManager($connect);
 $responseManager = new ReponselogManager($connect);
 
 // logs
-if(isset($_GET['logs'])&&ctype_digit($_GET['logs'])){
-    $logs = (int) $_GET['logs'];
+if(isset($_GET['logs'])){
+    $logs = (int) $_SESSION['classe'];;
     // année
     $recupStats = $statsManager->SelectAllByAnnee($logs);
     // logs et pagination
     $nblogs = $responseManager->countAllLogsByAnnee($logs);
     $pg = (isset($_GET['page'])&&ctype_digit($_GET['page']))? (int) $_GET['page'] : 1;
     $recupLogs = $responseManager->selectAllLogsByAnneeWithPG($logs,$pg);
-    $pagination = ReponselogManager::pagination($nblogs,"?logs=$logs",$pg,"page",100);
+    $pagination = ReponselogManager::pagination($nblogs,"?logs",$pg,"page",100);
 
 
     if(is_string($recupStats)) die($recupStats);
