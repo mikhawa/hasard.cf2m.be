@@ -56,11 +56,16 @@
     </header>
 
     <main>
+        <?php
+        // we take the id of this classe
+        $idannee = array_search($_SESSION['classe'],$_SESSION['idannee']);
+        // for create the title
+        ?>
         <div class="col-lg-11 mx-auto p-3 py-md-5">
-            <h1 class="h2">Groupe Webdev 2023-2024  depuis <?=$letps?></h1>
+            <h1 class="h2"><?=$_SESSION['annee'][$idannee]?> <?=$_SESSION['section'][$idannee]?>  depuis <?=$letps?></h1>
             <p class=" h3 fs-5 pb-4 col-md-8">Une question, un.e stagiaire, une réponse !</p>
         </div>
-        <?php  // var_dump($_SESSION);?>
+        <?php //  var_dump($_SESSION);?>
         <div class="d-grid gap-2 col-6 mx-auto">
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 Nouvelle question au hasard !
