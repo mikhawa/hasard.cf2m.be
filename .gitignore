@@ -11,3 +11,8 @@ config.php
 
 # bibliothèques
 /vendor
+
+# cache
+/cache
+
+desktop.ini
