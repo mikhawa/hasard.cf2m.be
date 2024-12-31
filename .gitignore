@@ -10,9 +10,6 @@ config.php
 /datas/coolcoldenV2.mwb
 
 # bibliothèques
-/vendor
+/vendor/
 
-# cache
-/cache
 
-desktop.ini
