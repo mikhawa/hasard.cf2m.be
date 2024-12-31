@@ -39,11 +39,11 @@
             },
             "type": "library",
             "extra": {
+                "version": "4.1.1",
                 "composer-normalize": {
                     "indent-size": 4,
                     "indent-style": "space"
-                },
-                "version": "4.1.1"
+                }
             },
             "autoload": {
                 "psr-4": {
@@ -82,10 +82,10 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
+    "platform": {},
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }
