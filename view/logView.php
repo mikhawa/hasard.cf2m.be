@@ -82,8 +82,7 @@
 
 </main>
 <footer class="pt-5 my-5 text-center text-muted border-top">
-    Michaël Pitz - <a href="https://www.cf2m.be" target="_blank" title="Centre de formation CF2m">CF2m</a>
-    - <a href="https://www.pixelandco.be/" target="_blank" title="Design et sites">Pixelandco</a> &copy; <?= date("Y") ?>
+    <?php include "footerView.php" ?>
 </footer>
 </div>
 
