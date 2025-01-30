@@ -9,7 +9,7 @@
     2 => bien répondu avec aide ou recherche
     3 => bonne réponse
 
-### Version
+### Versions
 
 - Préversions 2024-01-08 au 2024-01-14
 - [V.1.0.0](https://github.com/mikhawa/hasard.cf2m.be/releases/tag/V.1.0.0) 2025-01-30 | Modification du footer pour ajouter le lien sur github
