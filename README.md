@@ -1,4 +1,4 @@
-# randomstag2022
+# random stagiaires
 
 ## stagiaires au hasard
 
@@ -8,3 +8,9 @@
     1 => mal répondu
     2 => bien répondu avec aide ou recherche
     3 => bonne réponse
+
+### Version
+
+- Préversions
+- [V.1.0.0](https://github.com/mikhawa/hasard.cf2m.be/releases/tag/V.1.0.0) 2025-01-30 | Modification du footer pour ajouter le lien sur github
+
