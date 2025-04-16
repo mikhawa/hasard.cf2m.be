@@ -2,6 +2,8 @@
 /*
  * Choice controller
  */
+use App\UserManager;
+
 
 // if you want to disconnect
 if(isset($_GET['disconnect'])){

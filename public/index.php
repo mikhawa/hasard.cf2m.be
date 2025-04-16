@@ -1,4 +1,13 @@
 <?php
+/*
+ * index.php
+ *
+ * This is the main entry point of the application.
+ * It handles session management, database connection, and routing to the appropriate controller based on user authentication and permissions.
+ */
+
+use App\UserManager;
+
 // start of session
 session_start([
     // session.cookie_lifetime specifies the lifetime of the cookie in seconds
