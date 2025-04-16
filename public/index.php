@@ -9,7 +9,7 @@ session_start([
 date_default_timezone_set('Europe/Brussels');
 
 // load dependencies
-require_once "../config-dev.php";
+require_once "../config.php";
 
 // composer autoload
 require '../vendor/autoload.php';
