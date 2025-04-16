@@ -1,6 +1,6 @@
 <?php
 
-
+namespace App;
 class AbstractModel
 {
     // constructeur - Appelé lors de l'instanciation

@@ -1,6 +1,6 @@
 <?php
 
-
+namespace App;
 class UserModel extends AbstractModel
 {
     protected int $iduser;

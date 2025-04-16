@@ -1,10 +1,12 @@
 <?php
 
-
+namespace App;
+use PDO;
+use Exception;
 class StagiairesManager implements ManagerInterface
 {
 
-    protected \PDO $connect;
+    protected PDO $connect;
 
     public function __construct(\PDO $db)
     {

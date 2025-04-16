@@ -1,5 +1,6 @@
 <?php
-
+use App\StagiairesManager;
+use App\AnneeManager;
 
 // Manager
 $stagiairesManager = new StagiairesManager($connect);

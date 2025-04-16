@@ -1,4 +1,9 @@
 <?php
+/*
+ * Public controller
+ */
+use App\UserModel;
+use App\UserManager;
 
 $userManager = new UserManager($connect);
 

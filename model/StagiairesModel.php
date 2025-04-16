@@ -1,6 +1,6 @@
 <?php
 
-
+namespace App;
 class StagiairesModel extends AbstractModel
 {
     protected int $idstagiaires;

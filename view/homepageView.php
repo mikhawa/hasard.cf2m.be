@@ -1,3 +1,6 @@
+<?php
+use App\Calcul;
+?>
 <!doctype html>
 <html lang="fr">
 <head>

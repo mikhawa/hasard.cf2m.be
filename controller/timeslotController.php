@@ -1,4 +1,7 @@
 <?php
+
+use App\Calcul;
+
 // management of the display time slot
 if (isset($_GET['temps'])) {
     switch ($_GET['temps']) {

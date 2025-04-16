@@ -3,6 +3,13 @@
  * Controller
  */
 
+use App\Calcul;
+use App\StagiairesManager;
+use App\AnneeManager;
+use App\ReponselogManager;
+use App\UserManager;
+
+
 // if you want to disconnect
 if(isset($_GET['disconnect'])){
     if(UserManager::disconnect()){

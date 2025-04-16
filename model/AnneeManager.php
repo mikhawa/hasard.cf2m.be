@@ -1,10 +1,12 @@
 <?php
 
-
+namespace App;
+use PDO;
+use Exception;
 class AnneeManager implements ManagerInterface
 {
 
-    protected \PDO $connect;
+    protected PDO $connect;
 
     public function __construct(\PDO $db)
     {

@@ -9,15 +9,18 @@ session_start([
 date_default_timezone_set('Europe/Brussels');
 
 // load dependencies
-require_once "../config.php";
+require_once "../config-dev.php";
 
+// composer autoload
+require '../vendor/autoload.php';
 
-// personal autoload to 'model' folder
+/* personal autoload to 'model' folder
 spl_autoload_register(function ($class) {
 
     // include with namespace and name of class
     include_once '../model/' . str_replace('\\', '/', $class) . '.php';
 });
+*/
 
 // try to connect with PDO
 try {

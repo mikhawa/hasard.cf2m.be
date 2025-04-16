@@ -1,5 +1,5 @@
 <?php
-
+namespace App;
 class Calcul
 {
     public static function Pourcent($valeur1, $valeur2): string

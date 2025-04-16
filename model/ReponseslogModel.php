@@ -1,6 +1,6 @@
 <?php
 
-
+namespace App;
 class ReponselogModel extends AbstractModel
 {
     protected int $idreponseslog;

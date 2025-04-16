@@ -1,6 +1,9 @@
 <?php
 
+namespace App;
 
+use PDO;
+use Exception;
 class ReponselogManager implements ManagerInterface
 {
 

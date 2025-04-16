@@ -1,6 +1,6 @@
 <?php
 
-
+namespace App;
 class AnneeModel extends AbstractModel
 {
     protected int $idannee;
