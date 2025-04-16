@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-class ReponselogModel extends AbstractModel
+class ReponseslogModel extends AbstractModel
 {
     protected int $idreponseslog;
     protected int $reponseslogcol;
@@ -21,9 +21,9 @@ class ReponselogModel extends AbstractModel
 
     /**
      * @param int $idreponseslog
-     * @return ReponselogModel
+     * @return ReponseslogModel
      */
-    public function setIdreponseslog(int $idreponseslog): ReponselogModel
+    public function setIdreponseslog(int $idreponseslog): ReponseslogModel
     {
         $this->idreponseslog = $idreponseslog;
         return $this;
@@ -39,9 +39,9 @@ class ReponselogModel extends AbstractModel
 
     /**
      * @param int $reponseslogcol
-     * @return ReponselogModel
+     * @return ReponseslogModel
      */
-    public function setReponseslogcol(int $reponseslogcol): ReponselogModel
+    public function setReponseslogcol(int $reponseslogcol): ReponseslogModel
     {
         $this->reponseslogcol = $reponseslogcol;
         return $this;
@@ -57,9 +57,9 @@ class ReponselogModel extends AbstractModel
 
     /**
      * @param string $remarque
-     * @return ReponselogModel
+     * @return ReponseslogModel
      */
-    public function setRemarque(string $remarque): ReponselogModel
+    public function setRemarque(string $remarque): ReponseslogModel
     {
         $this->remarque = $remarque;
         return $this;
@@ -75,9 +75,9 @@ class ReponselogModel extends AbstractModel
 
     /**
      * @param string $reponseslogdate
-     * @return ReponselogModel
+     * @return ReponseslogModel
      */
-    public function setReponseslogdate(string $reponseslogdate): ReponselogModel
+    public function setReponseslogdate(string $reponseslogdate): ReponseslogModel
     {
         $this->reponseslogdate = $reponseslogdate;
         return $this;
@@ -93,9 +93,9 @@ class ReponselogModel extends AbstractModel
 
     /**
      * @param int $user_iduser
-     * @return ReponselogModel
+     * @return ReponseslogModel
      */
-    public function setUserIduser(int $user_iduser): ReponselogModel
+    public function setUserIduser(int $user_iduser): ReponseslogModel
     {
         $this->user_iduser = $user_iduser;
         return $this;
@@ -111,9 +111,9 @@ class ReponselogModel extends AbstractModel
 
     /**
      * @param int $stagiaires_idstagiaires
-     * @return ReponselogModel
+     * @return ReponseslogModel
      */
-    public function setStagiairesIdstagiaires(int $stagiaires_idstagiaires): ReponselogModel
+    public function setStagiairesIdstagiaires(int $stagiaires_idstagiaires): ReponseslogModel
     {
         $this->stagiaires_idstagiaires = $stagiaires_idstagiaires;
         return $this;
@@ -129,9 +129,9 @@ class ReponselogModel extends AbstractModel
 
     /**
      * @param int $annee_idannee
-     * @return ReponselogModel
+     * @return ReponseslogModel
      */
-    public function setAnneeIdannee(int $annee_idannee): ReponselogModel
+    public function setAnneeIdannee(int $annee_idannee): ReponseslogModel
     {
         $this->annee_idannee = $annee_idannee;
         return $this;
